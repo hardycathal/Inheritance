@@ -1,6 +1,6 @@
 package ie.atu;
 
-class Person {
+public class Person {
     private String name;
     private String address;
     private String number;
@@ -10,6 +10,7 @@ class Person {
         this.address = " ";
         this.number = " ";
     }
+
     public Person(String name, String address, String number) {
         this.name = name;
         this.address = address;
@@ -39,4 +40,15 @@ class Person {
     public void setNumber(String number) {
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }
+
+
