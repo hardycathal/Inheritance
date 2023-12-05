@@ -2,7 +2,7 @@ package ie.atu;
 
 public class Customer extends Person {
     private String custNumber;
-    private Boolean mail;
+    private boolean mail;
 
     public Customer() {
     }
@@ -11,9 +11,10 @@ public class Customer extends Person {
         this.custNumber = custNumber;
     }
 
-    public Customer(String name, String address, String number, String custNumber) {
+    public Customer(String name, String address, String number, String custNumber, boolean mail) {
         super(name, address, number);
         this.custNumber = custNumber;
+        this.mail = mail;
     }
 
     public String getCustNumber() {
@@ -30,5 +31,14 @@ public class Customer extends Person {
 
     public void setMail(Boolean mail) {
         this.mail = mail;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Customer{" + super.toString() + '\'' +
+                "custNumber='" + custNumber + '\'' +
+                ", mail=" + mail +
+                '}';
     }
 }
